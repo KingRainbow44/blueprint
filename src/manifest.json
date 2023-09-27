@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Blueprint",
+  "description": "A Canvas user-interface replacement.",
+  "version": "0.1.0",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["src/content.tsx"]
+    }
+  ]
+}
