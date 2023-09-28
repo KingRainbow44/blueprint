@@ -7,7 +7,6 @@
 
 // This holds the backings for the UI to access.
 // All information here is cached.
-import Dashboard from "@ui/Dashboard.tsx";
 
 export default class Canvas {
     /**
@@ -24,10 +23,10 @@ export default class Canvas {
         // Check if the resource is cached.
         const data = localStorage.getItem(resource);
         if (data) {
-            const parsed = JSON.parse(data) as { _ttl: number; };
+            const parsed = JSON.parse(data) as { _ttl?: number; };
 
             // Check if the resource is expired.
-            if (parsed._ttl > Date.now()) {
+            if (parsed._ttl && parsed._ttl > Date.now()) {
                 delete parsed._ttl;
                 return parsed as T;
             }
@@ -72,7 +71,7 @@ export default class Canvas {
      *
      * @param id The ID of the course to fetch.
      */
-    public static async getCourse(id: number): Promise<Course | undefined> {
+    public static async getCourse(id: number): Promise<Course | DashboardCard | undefined> {
         return (await Canvas.getCourses()).find(course => course.id == id);
     }
 }
