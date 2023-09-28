@@ -1,0 +1,13 @@
+.Dashboard {
+    @apply flex flex-col w-full h-full p-3;
+}
+
+.Dashboard_Title {
+    @apply text-4xl p-2 my-1;
+}
+
+.Dashboard_Courses {
+     @apply flex flex-col flex-wrap overflow-y-scroll;
+
+     gap: 24px;
+}

@@ -1,0 +1,32 @@
+.NavSideBar {
+    @apply flex flex-col py-2 w-full;
+
+    max-width: 84px;
+
+    background-color: var(--bg-secondary);
+}
+
+.NavSideBar_Link {
+    @apply flex flex-col items-center p-2;
+
+    color: var(--text-primary);
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    p {
+        @apply text-center;
+    }
+
+    svg {
+        width: 26px;
+        filter: var(--white-invert);
+    }
+}

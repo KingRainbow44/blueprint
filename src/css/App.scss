@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    margin: 0;
+
+    --bg-primary: #1f2937;
+    --bg-secondary: #111827;
+    --accent-color: #60a5fa;
+
+    --text-primary: #fff;
+    --button-primary: #3b82f6;
+    --border-primary: #374151;
+
+    --white-invert: invert(100%) sepia(29%) saturate(2%) hue-rotate(337deg) brightness(106%) contrast(101%);;
+}
+
+html[data-theme="light"] {
+    --bg-primary: #f3f4f6;
+    --bg-secondary: #170c59;
+    --accent-color: #3b82f6;
+
+    --text-primary: #111827;
+    --button-primary: #60a5fa;
+    --border-primary: #d1d5db;
+}
+
+body {
+    @apply h-screen;
+
+    padding: 0;
+    margin: 0;
+
+    font-family: Poppins, sans-serif;
+}
+
+.App {
+    @apply flex flex-row h-full w-screen;
+
+    background: var(--bg-primary);
+}

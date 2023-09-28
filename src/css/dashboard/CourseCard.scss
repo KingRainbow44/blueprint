@@ -1,0 +1,25 @@
+.CourseCard {
+    @apply flex flex-col overflow-hidden;
+
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.CourseCard_Header {
+    @apply flex flex-row;
+
+    width: 262px;
+    height: 146px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: brightness(80%);
+}
+
+.CourseCard_Front {
+    @apply flex w-full;
+
+    opacity: 0.5;
+}
