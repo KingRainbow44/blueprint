@@ -1,0 +1,33 @@
+.CourseModules {
+  @apply flex flex-col w-full p-5;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.CourseModules_Title {
+  @apply mb-4;
+}
+
+.CourseModules_List {
+  @apply flex flex-col gap-4;
+}
+
+.CourseModules_Trigger {
+  @apply flex flex-row p-3;
+
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+}
+
+.CourseModules_Module {
+  @apply flex flex-col;
+
+  color: var(--text-primary);
+
+  span {
+    @apply flex flex-row p-3 gap-2;
+
+    background-color: var(--bg-secondary);
+  }
+}

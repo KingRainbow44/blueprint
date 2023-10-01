@@ -12,6 +12,11 @@ import Logger from "@backend/logger";
 const isCanvas = document.getElementById("application")
     ?.classList.contains("ic-app");
 
+// Define the browser router.
+const router = createBrowserRouter([
+    { path: "*", element: <App /> }
+]);
+
 if (isCanvas) {
     const startTime = Date.now();
 
@@ -27,14 +32,11 @@ if (isCanvas) {
     document.querySelector("link[type='image/x-icon']")
         ?.setAttribute("href", "https://i.imgur.com/fsDKkUI.png");
 
-    // Define the browser router.
-    const router = createBrowserRouter([
-        { path: "*", element: <App /> }
-    ]);
-
     // Render the page.
     render(<RouterProvider router={router} />, document.body);
 
     // Log the end time.
     Logger.log(`Finished in ${Date.now() - startTime}ms.`);
 }
+
+export default router;

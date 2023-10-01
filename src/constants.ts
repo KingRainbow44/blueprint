@@ -1,5 +1,6 @@
 export class Routes {
     public static readonly HOME = "/";
+    public static readonly COURSE = "/course";
     public static readonly CALENDAR = "/calendar";
     public static readonly MESSAGES = "/inbox";
     public static readonly SETTINGS = "/settings";
@@ -19,4 +20,9 @@ export class Routes {
     public static getName(route: string): string {
         return Routes.reverse[route] ?? route;
     }
+}
+
+export class Icons {
+    public static readonly ASSIGNMENT = "";
+    public static readonly QUIZ = "";
 }

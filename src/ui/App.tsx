@@ -5,6 +5,7 @@ import { Location, Route, Routes, useLocation } from "react-router-dom";
 import NavSideBar from "@ui/NavSideBar.tsx";
 import Dashboard from "@ui/Dashboard.tsx";
 import TaskList from "@ui/TaskList.tsx";
+import CourseModules from "@ui/course/CourseModules.tsx";
 
 import { Routes as AppRoutes } from "@app/constants";
 
@@ -64,6 +65,7 @@ function Routing() {
     return (
         <Routes>
             <Route path={AppRoutes.HOME} element={<Home />} />
+            <Route path={`${AppRoutes.COURSE}/:id`} element={<CourseModules />} />
         </Routes>
     );
 }
